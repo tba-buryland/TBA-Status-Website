@@ -1,123 +1,48 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-const btsSkyTrain = "/logo/bts_skytrain.png";
-const mrta = "/logo/mrta.png";
-const srtet = "/logo/srtet.png";
-const srt = "/logo/srt.png";
-const cp_exboat = "/logo/cp_exboat.png";
-const bus = "/logo/bus.png";
-const exat = "/logo/exat.png";
-const hwy = "/logo/hwy.png";
 
 const logo = {
-    'ระบบรถไฟฟ้า BTS': { src: btsSkyTrain, width: 50, height: 50 },
-    'รถไฟฟ้ามหานคร': { src: mrta, width: 50, height: 50 },
-    'รถไฟฟ้า รฟท.': { src: srtet, width: 50, height: 50 },
-    'การรถไฟแห่งประเทศไทย': { src: srt, width: 50, height: 50 },
-    'เรือด่วนเจ้าพระยา': { src: cp_exboat, width: 50, height: 50 },
-    'รถเมล์สายต่างๆ': { src: bus, width: 50, height: 50 },
-    'ทางด่วนในกรุงเทพมหานคร': {src: exat, width: 50, height: 50 },
-    'ทางหลวงชนบท': {src: hwy, width: 50, height: 50 },
+    "Buryland Metro": { src: "/logo/buryland_metro.png", width: 50, height: 50 },
+    "Airlink": { src: "/logo/airlink.png", width: 50, height: 50 },
+    "Intercity": { src: "/logo/intercity.png", width: 50, height: 50 },
+    "Meugon Connect": { src: "/logo/meugon.png", width: 50, height: 50 },
+    "Bus Services": { src: "/logo/bus.png", width: 50, height: 50 },
+    "Boat Services": { src: "/logo/boat.png", width: 50, height: 50 },
+    "Road Services": { src: "/logo/road.png", width: 50, height: 50 },
+    "Incheon Connect": { src: "/logo/incheon.png", width: 50, height: 50 },
+    // Add other operators' logos here as needed
 };
 
-const statusData = [
-    {
-        title: 'ระบบรถไฟฟ้า BTS',
-        upvotes: 0, // Example upvote count
-        items: [
-            { label: 'สายสุขุมวิท', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีลม', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีทอง', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีเหลือง', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีชมพู', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'รถไฟฟ้ามหานคร',
-        upvotes: 0,
-        items: [
-            { label: 'สายสีน้ำเงิน', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีม่วง', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีส้ม', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'รถไฟฟ้า รฟท.',
-        upvotes: 0,
-        items: [
-            { label: 'สายสีแดง (รังสิต-บางซื่อ)', status: 'ไม่มีข้อมูล' },
-            { label: 'สายสีแดง (ตลิ่งชัน-บางซื่อ)', status: 'ไม่มีข้อมูล' },
-            { label: 'แอร์พอร์ต เรล ลิงก์', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'การรถไฟแห่งประเทศไทย',
-        upvotes: 0,
-        items: [
-            { label: 'สายเหนือ', status: 'ไม่มีข้อมูล' },
-            { label: 'สายตะวันออกเฉียงเหนือ', status: 'ไม่มีข้อมูล' },
-            { label: 'สายตะวันออก', status: 'ไม่มีข้อมูล' },
-            { label: 'สายใต้', status: 'ไม่มีข้อมูล' },
-            { label: 'สายวงเวียนใหญ่-มหาชัย', status: 'ไม่มีข้อมูล' },
-            { label: 'สายมหาชัย-แม่กลอง', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'เรือด่วนเจ้าพระยา',
-        upvotes: 0,
-        items: [
-            { label: 'ธงส้ม', status: 'ไม่มีข้อมูล' },
-            { label: 'ธงเหลือง', status: 'ไม่มีข้อมูล' },
-            { label: 'ธงเขียวเหลือง', status: 'ไม่มีข้อมูล' },
-            { label: 'ธงทอง', status: 'ไม่มีข้อมูล' },
-            { label: 'ธงแดง', status: 'ไม่มีข้อมูล' },
-            { label: 'ธงฟ้า (เรือท่องเที่ยว)', status: 'ไม่มีข้อมูล' },
-            { label: 'ไทยสมายล์โบ้ท', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'รถเมล์สายต่างๆ',
-        upvotes: 0,
-        items: [
-            { label: 'รถโดยสารด่วนพิเศษ BRT', status: 'ไม่มีข้อมูล' },
-            { label: 'รถเมล์ ขสมก.', status: 'ไม่มีข้อมูล' },
-            { label: 'ไทยสมายล์บัส', status: 'ไม่มีข้อมูล' },
-            { label: 'รถสองแถว', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'ทางด่วนในกรุงเทพมหานคร',
-        upvotes: 0,
-        items: [
-            { label: 'เฉลิมมหานคร', status: 'ไม่มีข้อมูล' },
-            { label: 'ศรีรัช', status: 'ไม่มีข้อมูล' },
-            { label: 'ฉลองรัช', status: 'ไม่มีข้อมูล' },
-            { label: 'บูรพาวิถี', status: 'ไม่มีข้อมูล' },
-            { label: 'ทางพิเศษสาย S1', status: 'ไม่มีข้อมูล' },
-            { label: 'กาญจนาภิเษก (ฝั่งใต้)', status: 'ไม่มีข้อมูล' },
-            { label: 'อุดรรัถยา', status: 'ไม่มีข้อมูล' },
-            { label: 'ประจิมรัถยา', status: 'ไม่มีข้อมูล' },
-            { label: 'ดอนเมืองโทลล์เวย์', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-    {
-        title: 'ทางหลวงชนบท',
-        upvotes: 0,
-        items: [
-            { label: 'ถนน พหลโยธิน', status: 'ไม่มีข้อมูล' },
-            { label: 'ถนน มิตรภาพ', status: 'ไม่มีข้อมูล' },
-            { label: 'ถนน สุขุมวิท', status: 'ไม่มีข้อมูล' },
-            { label: 'ถนน เพชรเกษม', status: 'ไม่มีข้อมูล' },
-            { label: 'มอเตอร์เวย์ สาย M5', status: 'ไม่มีข้อมูล' },
-            { label: 'มอเตอร์เวย์ สาย M6', status: 'ไม่มีข้อมูล' },
-            { label: 'มอเตอร์เวย์ สาย M7 (กรุงเทพ-ชลบุรี)', status: 'ไม่มีข้อมูล' },
-            { label: 'มอเตอร์เวย์ สาย M8', status: 'ไม่มีข้อมูล' },
-            { label: 'มอเตอร์เวย์ สาย M9 (กาญจนาภิเษก)', status: 'ไม่มีข้อมูล' },
-        ],
-    },
-];
+const Status = () => {
+    const [statusData, setStatusData] = useState([]);
 
-function Status() {
+    useEffect(() => {
+        fetch(
+            "https://script.googleusercontent.com/macros/echo?user_content_key=2Oh0A0E8HZ5B9wr4AFBgAZCu5rN3Ne-7HAxJxb7UbhOglXEQ0GKINyQCvu7oGGWq4-n8Kmpd_D1CmALHKXOeW3FGaVR_jPzAm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnD62zT1h2z_vD7kvy6NoLDam6SPgXh07FrJjKbCCZsaF8aYFnmyK7fESZ4ZFsvX_qc6fU0xwrd49dUT7c85_zdDcddn2qz7mj9z9Jw9Md8uu&lib=Ml0Escz_lWkFxxC60B0U6jcuLjXA8Iszf"
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                // Process data
+                const processedData = data.slice(1).reduce((acc, [prefix, route, operator, status]) => {
+                    let category = acc.find((cat) => cat.title === operator);
+                    if (!category) {
+                        category = {
+                            title: operator,
+                            upvotes: 0,
+                            items: [],
+                        };
+                        acc.push(category);
+                    }
+                    category.items.push({ label: route, status });
+                    return acc;
+                }, []);
+                setStatusData(processedData);
+            })
+            .catch((error) => console.error("Error fetching data:", error));
+    }, []);
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-base-200">
             {statusData.map((section) => (
@@ -129,8 +54,8 @@ function Status() {
                                 className="mr-2"
                                 src={logo[section.title].src}
                                 alt={section.title}
-                                width={40} // Reduced size for mobile
-                                height={40} // Reduced size for mobile
+                                width={40}
+                                height={40}
                             />
                         )}
                         <h3 className="text-sm sm:text-lg font-semibold">{section.title}</h3>
@@ -140,24 +65,17 @@ function Status() {
                         {section.items.map((item) => (
                             <li key={item.label} className="flex items-center justify-between mb-1">
                                 <div className="flex items-center">
-                                    {logo[item.label] && (
-                                        <Image
-                                            className="mr-2"
-                                            src={logo[item.label].src}
-                                            alt={item.label}
-                                            width={40} // Reduced size for mobile
-                                            height={40} // Reduced size for mobile
-                                        />
-                                    )}
                                     <span className="text-xs sm:text-sm">{item.label}</span>
                                 </div>
                                 <span
                                     className={`px-2 py-1 text-xs sm:text-sm rounded-sm ${
-                                        item.status === 'ปิดให้บริการ'
-                                            ? 'bg-error text-error-content'
-                                            : item.status === 'หนาแน่น' || item.status === 'รถติด'
-                                                ? 'bg-warning text-warning-content'
-                                                : 'bg-success text-success-content'
+                                        item.status === "Cancelled" || item.status === "Closed"
+                                            ? "bg-error text-error-content"
+                                            : item.status === "Congestion" || item.status === "Issues"
+                                                ? "bg-warning text-warning-content"
+                                                : item.status === "Operation" || item.status === "Not Busy"
+                                                    ? "bg-success text-success-content"
+                                                    : "bg-info text-info-content"
                                     }`}
                                 >
                                     {item.status}
@@ -165,18 +83,10 @@ function Status() {
                             </li>
                         ))}
                     </ul>
-                    {/* Upvotes */}
-                    <div className="absolute bottom-2 right-2 text-xs sm:text-sm text-gray-500">
-                        {section.upvotes === 0
-                            ? "ไม่มีการโหวต"
-                            : section.upvotes === 1
-                                ? "1 โหวต"
-                                : `${section.upvotes} โหวต`}
-                    </div>
                 </div>
             ))}
         </div>
     );
-}
+};
 
 export default Status;
