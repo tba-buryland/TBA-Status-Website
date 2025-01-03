@@ -71,7 +71,7 @@ const Status = () => {
                                     className={`px-2 py-1 text-xs sm:text-sm rounded-sm ${
                                         item.status === "Cancelled" || item.status === "Closed"
                                             ? "bg-error text-error-content"
-                                            : item.status === "Congestion" || item.status === "Issues"
+                                            : item.status === "Congestion" || item.status === "Crowded"
                                                 ? "bg-warning text-warning-content"
                                                 : item.status === "Operation" || item.status === "Not Busy"
                                                     ? "bg-success text-success-content"
