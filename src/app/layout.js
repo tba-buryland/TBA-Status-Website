@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Mitr } from "next/font/google"; // Import Mitr font
+import { Poppins } from "next/font/google"; // Import Poppins font
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -11,22 +12,17 @@ const geistSans = Geist({
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+// Import Poppins font as default
+const poppins = Poppins({
+    variable: "--font-poppins",
     subsets: ["latin"],
-});
-
-// Import Mitr font with specified weight
-const mitr = Mitr({
-    variable: "--font-mitr",
-    subsets: ["latin", "thai"],
-    weight: "400", // You can change this to another weight like "300", "500", etc. if needed
+    weight: "400", // You can adjust the weight if needed
 });
 
 export const metadata = {
-    title: "CityRoad",
-    description: "A solution for the community to update real-time transport status.",
-    author: "Phongsiri Loedphongthai",
+    title: "TBA-CMS",
+    description: "A solution to update real-time transport status.",
+    author: "CityRail by KONNO",
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +30,7 @@ export default function RootLayout({ children }) {
         <>
             {/* Manually define <html> and <body> */}
             <html lang="th">
-            <body className={`${geistSans.variable} ${geistMono.variable} ${mitr.variable} antialiased`}>
+            <body className={`${poppins.variable} antialiased`}>
             <div className="flex flex-col min-h-screen">
                 <Navbar/>
                 <CommonAlert/>

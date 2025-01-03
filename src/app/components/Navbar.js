@@ -9,7 +9,7 @@ export default function Navbar() {
                 <Link href="/" title="Home Page">
                     <Image
                         className="invert"
-                        src="/cityrail.svg"
+                        src="/logo/tba-cityrail.png"
                         alt="CityRoad Logo"
                         width={100}
                         height={100}

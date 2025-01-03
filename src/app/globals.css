@@ -15,20 +15,6 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'TH SarabunPSK', 'Mitr', 'Sarabun', Arial, Helvetica, sans-serif;
-}
-
-/* globals.css */
-
-/* Apply the Mitr font for Thai text */
-html[lang="th"] {
-  font-family: 'Mitr', sans-serif;
-}
-
-/* Apply default font for other text */
-body[lang="th"] {
-  font-family: 'Mitr', sans-serif;
+  font-family: 'Poppins', 'TH SarabunPSK', sans-serif;
 }
 

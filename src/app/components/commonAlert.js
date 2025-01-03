@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function CommonAlert() {
     // Array of alert texts
     const alertText = [
-        "เว็บไซต์ของเราอยู่ระหว่างการพัฒนา อาจจะมีบางสิ่งที่ยังไม่ทำงาน ขออภัยในความไม่สะดวก ข้อมูลที่ท่านเห็นยังคงเป็นข้อมูลสมมติ"
+        "Our website is still under development, stay tuned for features!"
     ];
 
     // State for the current alert index
@@ -43,7 +43,7 @@ export default function CommonAlert() {
             <div className="flex flex-col items-start sm:items-start sm:text-left w-full">
                 <div className="mt-1">
                     <h3 className="text-sm sm:text-lg mb-1 text-right sm:text-left"> {/* Right-align text on mobile */}
-                        ข่าวล่าสุด: {alertText[currentAlert]}{" "}
+                        Alert: {alertText[currentAlert]}{" "}
                         <span className="text-xs sm:text-sm text-gray-700 ml-3">
                             [{currentAlert + 1}/{alertText.length}]
                         </span>
