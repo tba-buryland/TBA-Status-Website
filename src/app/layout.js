@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import { Mitr } from "next/font/google"; // Import Mitr font
 import { Poppins } from "next/font/google"; // Import Poppins font
 import "./globals.css";
