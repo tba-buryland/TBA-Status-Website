@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 import routes from "./routes.json";
 
@@ -35,8 +35,11 @@ function isDark(color) {
 
 
 const RouteDetails = () => {
+
+
+    
     const router = useSearchParams();
-    const { path } = router.get;
+    const { path } = router.get('search');
 
     const stations = path ? path.split(",") : [];
     const routeNames = []; // Collect all route names here
