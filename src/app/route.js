@@ -1,4 +1,6 @@
-import { useRouter } from "next/navigation";
+"use client";
+
+import { useRouter } from "next/router";
 import React from "react";
 import routes from "./routes.json";
 
