@@ -20,7 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-    title: "TBA-CMS",
+    title: "HT-CMS",
     description: "A solution to update real-time transport status.",
     author: "CityRail by KONNO",
 };
