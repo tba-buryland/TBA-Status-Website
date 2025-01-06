@@ -5,11 +5,6 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import CommonAlert from "@/app/components/commonAlert";
 
-// Importing fonts
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
 
 // Import Poppins font as default
 const poppins = Poppins({
