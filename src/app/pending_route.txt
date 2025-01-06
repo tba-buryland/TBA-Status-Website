@@ -1,0 +1,59 @@
+[M1/M2] - #056f0d
+The Triangle / Dest: The Triangle/Northshore
+Two Bridges [OIS - C1/C2] / Faybury
+Harlonian Plaza [M3] / Dest: Lighthouse Point/Southside
+
+[M1] - #056f0d
+Harlonian Plaza [M2/M3] / Dest: The Triangle
+North Riverbank Street
+Capital Station [M3/C1/C2]
+Chelsham Street [C1/C2/M11]
+Eastside [C2]
+Old Town
+Lighthouse Point [M3]
+
+[M11] - #056f0d
+Chelsham Street [M1/C1/C2]
+Vanderpool Street
+Monument
+Wixley Beach
+
+[M2] - #ebe200
+Northshore
+Lord Bishop's Square
+Stadium
+The Triangle [M1] / Dest: Southpoint
+
+[M2] - #ebe200
+Harlonian Plaza [M1/M3] / Dest: Northshore
+Southside Circus
+SouMa
+Southpoint
+
+[M3] - #c50011
+Ganters Hill
+South Street
+Hibbing Gardens
+Fra Mauro Street
+Sergels Square [C1/C2]
+Berry Isle
+Harlonian Plaza [M1/M2]
+Capital Station [M1/C1/C2]
+Victory Column
+National Mall [C1]
+Duluth [M31]
+Lighthouse Point [M1]
+
+[M31 (Manual Operated)] - #c50011
+Duluth [M3]
+Shrewsberry
+Long Island Airfield
+Downminster [OIS - C11] / Upminster
+
+[OIS] - #2b2b2b
+Downminster [M31]
+Upminster [C11]
+
+[OIS] - #2b2b2b
+Faybury [C1/C2]
+Two Bridges [M1/M2]
