@@ -1,0 +1,260 @@
+{
+  "Shoretrench": {
+    "Sergels Square": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay/Portsfield Central"
+    }
+  },
+  "Sergels Square": {
+    "Shoretrench": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Tower Quarters": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay/Portsfield Central"
+    }
+  },
+  "Tower Quarters": {
+    "Sergels Square": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Faybury": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay/Portsfield Central"
+    }
+  },
+  "Faybury": {
+    "Tower Quarters": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Capital Station": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay/Portsfield Central"
+    }
+  },
+  "Capital Station": {
+    "Faybury": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Chelsham Street": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay/Portsfield Central"
+    }
+  },
+  "Chelsham Street": {
+    "National Mall": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1/C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Chelsham Street": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay"
+    },
+    "Eastside": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "National Mall": {
+    "Chelsham Street": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Olympic Park": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay"
+    }
+  },
+  "Olympic Park": {
+    "National Mall": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Ovxille": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay"
+    }
+  },
+  "Ovxille": {
+    "Olympic Park": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Stenford Bay": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Stenford Bay"
+    },
+    "Upminster": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C11",
+      "color": "#05b20d",
+      "routeDestination": "Upminster"
+    }
+  },
+  "Stenford Bay": {
+    "Ovxille": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C1",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    }
+  },
+  "Eastside": {
+    "Chelsham Street": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Inner Harbour": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "Eastside": {
+    "Chelsham Street": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Inner Harbour": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "Inner Harbour": {
+    "Eastside": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Seaporte Junction": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "Seaporte Junction": {
+    "Inner Harbour": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Future's End": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "Future's End": {
+    "Seaporte Junction": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    },
+    "Portsfield Central": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Portsfield Central"
+    }
+  },
+  "Portsfield Central": {
+    "Future's End": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Shoretrench"
+    }
+  },
+  "Upminster": {
+    "Ovxille": {
+      "distance": 1,
+      "type": "metro",
+      "line": "C2",
+      "color": "#05b20d",
+      "routeDestination": "Ovxille"
+    }
+  }
+}
