@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <html lang="th">
             <body className={`${poppins.variable} antialiased`}>
             <div className="flex flex-col min-h-screen">
-                // <Navbar/>
+    {/*<Navbar/>*/}
                 <CommonAlert/>
                 <div className="flex-grow pt-0"> {/* Ensure no overlap between navbar and content */}
                     <main>{children}</main>
