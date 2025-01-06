@@ -35,8 +35,8 @@ function isDark(color) {
 
 
 const RouteDetails = () => {
-    const router = useRouter();
-    const { path } = router.useSearchParams.get;
+    const router = useSearchParams();
+    const { path } = router.get;
 
     const stations = path ? path.split(",") : [];
     const routeNames = []; // Collect all route names here
